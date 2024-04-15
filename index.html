@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>DSSV</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -41,7 +41,7 @@
               </div>
               <div class="col-6">
                 <label for="">Mật khẩu :</label>
-                <input type="text" class="form-control" id="txtMKhau" />
+                <input type="password" class="form-control" id="txtMKhau" />
               </div>
             </div>
             <div class="row">
@@ -58,8 +58,44 @@
                 <input type="text" class="form-control" id="txtHoa" />
               </div>
             </div>
-            <div class="form-group text-center"></div>
+            <div class="form-group text-center my-3">
+              <button type="button" class="btn btn-success" onclick="themSV()">
+                Thêm sinh viên
+              </button>
+              <button type="button" class="btn btn-dark" onclick="resetForm()">Reset</button>
+              <button type="button" class="btn btn-info text-white" onclick="capNhat()">
+                Cập nhật
+              </button>
+            </div>
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nhập tên sinh viên"
+                />
+              </div>
+              <div class="col-3">
+                <button class="btn btn-primary">Search</button>
+              </div>
+            </div>
+            </div>
           </form>
+          <div class="col-8 mx-auto my-3">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Mã Sinh Viên</th>
+                  <th>Tên Sinh Viên</th>
+                  <th>Email</th>
+                  <th>Điểm Trung Bình</th>
+                  <th>Thao tác</th>
+                  <!-- <th>Thao tác</th> -->
+                </tr>
+              </thead>
+              <tbody id="tBody"></tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -75,6 +111,8 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="./model.js"></script>
+    <script src="./controller.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
